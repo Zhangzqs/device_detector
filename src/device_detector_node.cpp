@@ -101,8 +101,10 @@ void openPrivatePort() {
         if(success){    //如果串口打开成功
             //尝试获取设备地址
             uint8_t addr = getAddr();
-            ROS_INFO("Got addr: %d",addr);
-            detectedCallback(port,addr);
+            if(addr != 0xff){
+                ROS_INFO("Got addr: %d",addr);
+                detectedCallback(port,addr);
+            }
             ser.close();
         }
     }
