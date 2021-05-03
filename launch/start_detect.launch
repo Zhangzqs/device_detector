@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="device_detector" type="device_detector_node" name="device_detector" output="screen">
+        <param name="chassis_name" value="chassis"/>
+        <param name="robotic_arm_name" value="robotic_arm"/>
+        <param name="imu_name" value="imu"/>
+    </node>
+</launch>
