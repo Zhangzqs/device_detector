@@ -43,7 +43,7 @@ public:
     void sendFrame(CmdDataFrame& frame){
         std::vector<uint8_t> bytes = frame.generateBytes();
         writeBytes(bytes.data(),int(bytes.size()));
-        ROS_INFO("Has Send %s",frame.toString().c_str());
+        //ROS_INFO("Has Send %s",frame.toString().c_str());
     }
 
     /**
